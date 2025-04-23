@@ -30,7 +30,7 @@ const makePlay = (random, selection, move, moveElement) => {
     };
 };
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-const appendDot = (moveElement) => {moveElement.innerText = moveElement.innerText + "."};
+const appendDot = (moveElement) => {moveElement.innerText += "."};
 const waiting = async (random, selection, move, moveElement) => {
     moveElement.innerText = "Waiting for computer's move"
     appendDot(moveElement);
