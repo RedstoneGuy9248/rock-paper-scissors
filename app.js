@@ -4,26 +4,26 @@ const makePlay = (random, selection, move, moveElement) => {
     if (random > 0) {
         switch(selection) {
             case "rock":
-                move = "Paper";
+                move = "📃Paper📃";
                 break;
             case "paper":
-                move = "Scissors";
+                move = "✂️Scissors✂️";
                 break;
             case "scissors":
-                move = "Rock";
+                move = "🪨Rock🪨";
                 break;
         };
         moveElement.innerText = `Computer plays ${move}! You lose!`;
     } else {
         switch(selection) {
             case "rock":
-                move = "scissors";
+                move = "✂️Scissors✂️";
                 break;
             case "paper":
-                move = "rock";
+                move = "🪨Rock🪨";
                 break;
             case "scissors":
-                move = "paper";
+                move = "📃Paper📃";
                 break;
         };
         moveElement.innerText = `Computer plays ${move}! You win!`;
