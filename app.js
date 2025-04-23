@@ -1,7 +1,7 @@
 const button = document.querySelector("button");
 const body = document.querySelector("body");
 const makePlay = (random, selection, move, moveElement) => {
-    if (random > 1) {
+    if (random > 0) {
         switch(selection) {
             case "rock":
                 move = "Paper";
