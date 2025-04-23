@@ -1,0 +1,16 @@
+body {
+    font-size: 64px;
+    margin-top: 20px;
+    text-align: center;
+    font-family: "Comic Sans MS";
+}
+input {
+    transform: scale(4);
+}
+button {
+    transform: scale(4);
+}
+form {
+    padding: 40px;
+    border-style: solid;
+}
