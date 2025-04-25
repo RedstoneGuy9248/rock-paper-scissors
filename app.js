@@ -1,5 +1,7 @@
 const button = document.querySelector("button");
 const body = document.querySelector("body");
+const choice = document.querySelector(`input[name="rpsinput"]:checked`);
+if (choice) {choice.checked = false};
 const makePlay = (random, selection, move, moveElement) => {
     if (random > 0) {
         switch(selection) {
@@ -46,11 +48,15 @@ button.addEventListener("click", () => {
     let random = Math.trunc(Math.random() * 10);
     const existingMove = document.querySelector("h1");
     if (existingMove) {existingMove.remove()};
-    const selection = document.querySelector(`input[name="rpsinput"]:checked`).value;
-    let move;            
-    const moveElement = document.createElement("h1");
-    body.appendChild(moveElement);
-    waiting(random, selection, move, moveElement);
+    const selection = document.querySelector(`input[name="rpsinput"]:checked`);
+    if (selection) {
+        let move;            
+        const moveElement = document.createElement("h1");
+        body.appendChild(moveElement);
+        waiting(random, selection.value, move, moveElement);
+    } else {
+        alert("You forgot to make a move!🪨📃✂️")
+    }
 });
 
 
